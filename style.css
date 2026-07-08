@@ -1,0 +1,42 @@
+:root {
+  --bg:       #0a0a0a;
+  --bg-soft:  #121212;
+  --line:     rgba(242, 237, 228, 0.12);
+  --text:     #f2ede4;
+  --muted:    #8b8680;
+  --red:      #e8342c;
+  --red-soft: rgba(232, 52, 44, 0.18);
+  --paper:    #f2ede4;   /* polaroid frame */
+  --ink:      #14110e;   /* text on paper */
+}
+ 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+html { scroll-behavior: smooth; }
+ 
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+ 
+a { color: inherit; }
+ 
+.red { color: var(--red); }
+ 
+/* handwritten red notes (the Jackie-style annotations) */
+.scribble {
+  font-family: "Caveat", cursive;
+  font-size: 1.35rem;
+  color: var(--red);
+  transform: rotate(-2deg);
+  display: inline-block;
+}
+ 
